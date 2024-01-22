@@ -24,13 +24,13 @@ class Student extends Person {
         absences = new HashMap<>();
         grades = new HashMap<>();
         for (String course : COURSES) {
-            absences.put(course + ".Abs", 0);  // Updated to include ".Abs" in the key
-            grades.put(course, 4.0); // Initialize all grades to 4 by default
+            absences.put(course + ".Abs", 0);  
+            grades.put(course, 4.0); 
         }
     }
 
     public void updateAbsences(String course, int count) {
-        absences.put(course + ".Abs", count);  // Updated to include ".Abs" in the key
+        absences.put(course + ".Abs", count);  
     }
 
     public void updateGrades(String course, double grade) {
