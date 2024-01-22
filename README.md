@@ -1,5 +1,6 @@
 # Student_Management_System
 I. Abstract
+
 The Student Management System is a Java application designed to manage student information within an educational setting. The application employs fundamental concepts of object-oriented programming, file manipulation, exception handling, and generic collections. It serves as a practical demonstration of skills acquired during the "Object Oriented Programming" course.
 
 II. Key Functionalities
