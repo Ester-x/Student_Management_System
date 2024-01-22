@@ -10,12 +10,12 @@ import java.util.stream.Collectors;
 class StudentManager {
     private List<Student> students;
     private Path filePath;
-    private Path courseAveragesAndAbsencesFilePath;  // Declare as a class variable
+    private Path courseAveragesAndAbsencesFilePath;  
 
     public StudentManager(String fileName, String courseAveragesAndAbsencesFileName) {
         students = new ArrayList<>();
         filePath = Paths.get(fileName);
-        courseAveragesAndAbsencesFilePath = Paths.get(courseAveragesAndAbsencesFileName);  // Initialize in the constructor
+        courseAveragesAndAbsencesFilePath = Paths.get(courseAveragesAndAbsencesFileName);  
         loadStudents();
     }
 
@@ -26,7 +26,7 @@ class StudentManager {
             } else {
                 List<String> lines = Files.readAllLines(filePath);
 
-                // Skip the first line (headers)
+                // Skip first line (headers)
                 if (lines.size() > 0) {
                     lines = lines.subList(1, lines.size());
                 }
@@ -52,7 +52,7 @@ class StudentManager {
                                 } catch (NumberFormatException e) {
                                     System.err.println("Error parsing absences or grades at line " + lineNumber + ": " + e.getMessage());
                                     System.err.println("Line content: " + line);
-                                    return; // Skip this line to prevent adding an incomplete student
+                                    return; 
                                 }
 
                                 student.updateAbsences(course, absences);
@@ -69,7 +69,7 @@ class StudentManager {
     }
     private void saveStudents() {
         List<String> lines = new ArrayList<>();
-        // Add CSV file headers
+       
         lines.add("Name,Student ID," +
                 String.join(",", Student.COURSES.stream().map(course -> course + ", " + course + ".Abs").collect(Collectors.toList())) +
                 ",Average Grade,Total Absences");
@@ -153,8 +153,8 @@ class StudentManager {
                     .orElse(0.0);
 
             int totalCourseAbsences = students.stream()
-                    .map(student -> student.getAbsences().get(course + ".Abs"))  // Updated to handle null value
-                    .filter(Objects::nonNull)  // Filter out null values
+                    .map(student -> student.getAbsences().get(course + ".Abs"))  // Handles null value
+                    .filter(Objects::nonNull)  // Filters out null values
                     .mapToInt(Integer::intValue)
                     .sum();
 
@@ -167,7 +167,7 @@ class StudentManager {
     }
     private void saveCourseAveragesAndAbsences() {
         List<String> lines = new ArrayList<>();
-        // Add CSV file headers for course averages and absences
+        // Add CSV file headers
         lines.add("Course,Average Grade,Total Absences");
 
         for (String course : Student.COURSES) {
