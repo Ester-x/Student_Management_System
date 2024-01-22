@@ -27,11 +27,11 @@ public class Main {
                     choice = scanner.nextInt();
                 } catch (InputMismatchException e) {
                     System.err.println("Invalid input. Please enter a number.");
-                    scanner.nextLine(); // Consume invalid input
+                    scanner.nextLine(); 
                     continue;
                 }
 
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine(); 
 
                 switch (choice) {
                     case 1:
@@ -47,7 +47,7 @@ public class Main {
                             studentManager.addStudent(student);
                         } catch (InputMismatchException | NumberFormatException e) {
                             System.err.println("Invalid input. Please enter valid data.");
-                            scanner.nextLine(); // Consume invalid input
+                            scanner.nextLine(); 
                         }
                         break;
 
@@ -66,12 +66,12 @@ public class Main {
 
                             System.out.println("Enter new absence count: ");
                             int newAbsenceCount = scanner.nextInt();
-                            scanner.nextLine(); // Consume newline
+                            scanner.nextLine(); 
 
                             studentManager.updateAbsences(studentId, courseToUpdate, newAbsenceCount);
                         } catch (InputMismatchException | NumberFormatException e) {
                             System.err.println("Invalid input. Please enter valid data.");
-                            scanner.nextLine(); // Consume invalid input
+                            scanner.nextLine(); 
                         }
                         break;
 
@@ -85,12 +85,12 @@ public class Main {
 
                             System.out.println("Enter new grade: ");
                             double newGrade = scanner.nextDouble();
-                            scanner.nextLine(); // Consume newline
+                            scanner.nextLine(); 
 
                             studentManager.updateGrades(studentId, courseToUpdate, newGrade);
                         } catch (InputMismatchException | NumberFormatException e) {
                             System.err.println("Invalid input. Please enter valid data.");
-                            scanner.nextLine(); // Consume invalid input
+                            scanner.nextLine(); 
                         }
                         break;
 
