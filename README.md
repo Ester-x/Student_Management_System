@@ -32,9 +32,10 @@ File I/O: Utilizes the java.nio.file package to read and write student data to a
 Exception Handling: Implements try-catch blocks to handle exceptions related to file manipulation.
 3. Generic Collections
 Lists and Maps: Uses List and Map data structures to manage student and course-related data efficiently.
-4. GUI and Event-Driven Programming
+5. GUI and Event-Driven Programming
 Console-Based Interface: Provides a text-based interface for user interactions, including input validation.
 Event-Driven Input: Captures user input events using the Scanner class for a dynamic and responsive user experience.
 
 IV. Summary
+
 The Student Management System project successfully integrates key concepts from the "Object Oriented Programming" course, showcasing proficiency in Java programming. The application offers a practical and efficient solution for managing student information, leveraging object-oriented principles and addressing real-world challenges in an educational environment. The comprehensive functionality, error handling, and use of various Java features contribute to a robust and well-structured application.
